@@ -39,8 +39,10 @@ def parse_log(file_name):
 
 f = plt.figure(figsize=[23, 10])
 
-log = ["synthetic_1_1", "mnist", "femnist", "shakespeare", "sent140_772user"]
-titles = ["Synthetic", "MNIST", "FEMNIST", "Shakespeare", "Sent140"]
+# log = ["synthetic_1_1", "mnist", "femnist", "shakespeare", "sent140_772user"]
+# titles = ["Synthetic", "MNIST", "FEMNIST", "Shakespeare", "Sent140"]
+log = ["synthetic_1_1"]
+titles = ["Synthetic"]
 rounds = [200, 100, 200, 40, 800]
 mus=[1, 1, 1, 0.001, 0.01]
 drop_rates=[0, 0.5, 0.9]
@@ -51,7 +53,7 @@ labels = ['FedAvg', r'FedProx ($\mu$=0)', r'FedProx ($\mu$>0)']
 improv = 0
 
 for drop_rate in range(3):
-    for idx in range(5):
+    for idx in range(1):
 
         ax = plt.subplot(3, 5, 5*(drop_rate)+idx+1)
 
